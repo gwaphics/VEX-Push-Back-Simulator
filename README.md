@@ -28,7 +28,7 @@ The VEX Push Back Simulator lets you practice and perfect your robot performance
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
