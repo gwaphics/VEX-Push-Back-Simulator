@@ -64,6 +64,9 @@ Open the built-in **Code Editor** from the simulator UI to write autonomous rout
 ```
 VEX-Push-Back-Simulator/
 ├── push-back-sim-(copy)/   # Main Godot project files
+    ├── Assets
+    ├── Scenes
+    ├── Scripts
 ├── .gitattributes
 └── .gitignore
 ```
