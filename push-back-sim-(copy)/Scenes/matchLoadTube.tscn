@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bv6ovw7adivq2"]
 
-[ext_resource type="Script" uid="uid://bcwv8y2dhyotg" path="res://matchLoadTube.gd" id="1_ds8se"]
-[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://redBlock.png" id="2_ds8se"]
-[ext_resource type="Texture2D" uid="uid://bsjqwvakxk5mw" path="res://blueBlock.png" id="3_gmn1k"]
+[ext_resource type="Script" uid="uid://bcwv8y2dhyotg" path="res://Scripts/matchLoadTube.gd" id="1_ds8se"]
+[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://Assets/redBlock.png" id="2_ds8se"]
+[ext_resource type="Texture2D" uid="uid://bsjqwvakxk5mw" path="res://Assets/blueBlock.png" id="3_gmn1k"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_4njvk"]
 

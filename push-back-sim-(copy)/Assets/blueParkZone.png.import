@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1ot2shajfomr"
-path="res://.godot/imported/redBlock.png-29d5ee23a2f8a5f41e44416f8ff9775b.ctex"
+uid="uid://xigtlqfdted1"
+path="res://.godot/imported/blueParkZone.png-ef989ad11049afe769d0d39a9b0537f0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://redBlock.png"
-dest_files=["res://.godot/imported/redBlock.png-29d5ee23a2f8a5f41e44416f8ff9775b.ctex"]
+source_file="res://Assets/blueParkZone.png"
+dest_files=["res://.godot/imported/blueParkZone.png-ef989ad11049afe769d0d39a9b0537f0.ctex"]
 
 [params]
 

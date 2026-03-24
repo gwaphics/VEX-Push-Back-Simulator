@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cowmxtpht1s4n"]
 
-[ext_resource type="Script" uid="uid://du0soikp4brou" path="res://robotBase.gd" id="2_dfm56"]
-[ext_resource type="Texture2D" uid="uid://j7lba557aux7" path="res://robot.png" id="2_yhfw1"]
+[ext_resource type="Script" uid="uid://du0soikp4brou" path="res://Scripts/robotBase.gd" id="2_dfm56"]
+[ext_resource type="Texture2D" uid="uid://j7lba557aux7" path="res://Assets/robot.png" id="2_yhfw1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv0v2"]
 size = Vector2(9.9, 57.52381)

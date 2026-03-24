@@ -46,8 +46,8 @@ func intakeFromTube():
 func updateBlockDisplay():
 	for i in (tubeStorage.size()):
 		if tubeStorage[i] == 1:
-			get_parent().get_node("Blocks/Block" + str(i + 1)).texture = preload("res://redBlock.png")
+			get_parent().get_node("Blocks/Block" + str(i + 1)).texture = preload("res://Assets/redBlock.png")
 		elif tubeStorage[i] == 2:
-			get_parent().get_node("Blocks/Block" + str(i + 1)).texture = preload("res://blueBlock.png")
+			get_parent().get_node("Blocks/Block" + str(i + 1)).texture = preload("res://Assets/blueBlock.png")
 		else:
 			get_parent().get_node("Blocks/Block" + str(i + 1)).hide()

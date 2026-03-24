@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://u60uplomfq4m"]
 
-[ext_resource type="Texture2D" uid="uid://cab4kdhndfgpy" path="res://pushBackSkillsFieldCropped.png" id="1_0cutk"]
-[ext_resource type="Texture2D" uid="uid://sldns2go6ofb" path="res://redParkZone.png" id="2_6e7u2"]
-[ext_resource type="Texture2D" uid="uid://xigtlqfdted1" path="res://blueParkZone.png" id="2_ujqnb"]
+[ext_resource type="Texture2D" uid="uid://cab4kdhndfgpy" path="res://Assets/pushBackSkillsFieldCropped.png" id="1_0cutk"]
+[ext_resource type="Texture2D" uid="uid://sldns2go6ofb" path="res://Assets/redParkZone.png" id="2_6e7u2"]
+[ext_resource type="Texture2D" uid="uid://xigtlqfdted1" path="res://Assets/blueParkZone.png" id="2_ujqnb"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_0cutk"]
 

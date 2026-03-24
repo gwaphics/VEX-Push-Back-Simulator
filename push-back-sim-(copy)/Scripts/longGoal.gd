@@ -73,7 +73,7 @@ func checkScore(color):
 	
 	if ($"../Blocks/Block6".visible && $"../Blocks/Block7".visible && $"../Blocks/Block8".visible):
 		if ($"../Blocks/Block6".texture == $"../Blocks/Block7".texture && $"../Blocks/Block7".texture == $"../Blocks/Block8".texture):
-			if ($"../Blocks/Block6".texture == preload("res://redBlock.png")):
+			if ($"../Blocks/Block6".texture == preload("res://Assets/redBlock.png")):
 				get_parent().set_meta("Control", "red")
 			else:
 				get_parent().set_meta("Control", "blue")
@@ -85,9 +85,9 @@ func redrawBlocks():
 		var block = get_parent().get_node("Blocks/Block" + str(i + 1))
 		if scored[i] != 0:
 			if scored[i] == 1:
-				block.texture = preload("res://redBlock.png")
+				block.texture = preload("res://Assets/redBlock.png")
 			else:
-				block.texture = preload("res://blueBlock.png")
+				block.texture = preload("res://Assets/blueBlock.png")
 			block.show()
 		else:
 			block.hide()

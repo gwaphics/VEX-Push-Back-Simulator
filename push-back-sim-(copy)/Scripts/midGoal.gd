@@ -116,9 +116,9 @@ func redrawBlocks():
 		var block = get_parent().get_node("Blocks/Block" + str(i + 1))
 		if scored[i] != 0:
 			if scored[i] == 1:
-				block.texture = preload("res://redBlock.png")
+				block.texture = preload("res://Assets/redBlock.png")
 			else:
-				block.texture = preload("res://blueBlock.png")
+				block.texture = preload("res://Assets/blueBlock.png")
 			block.show()
 		else:
 			block.hide()

@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 			var colorOfBlock = Inputs.ballStorage[-1]
 			Inputs.ballStorage.remove_at(Inputs.ballStorage.size() - 1)
 
-			var block_scene = preload("res://block.tscn")
+			var block_scene = preload("res://Scenes/block.tscn")
 			var block = block_scene.instantiate()
 			block.set_meta("Color", colorOfBlock)
 			block.scale = Vector2(0.25, 0.25)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://uxac21idxs7c"]
 
-[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://redBlock.png" id="1_58cwo"]
-[ext_resource type="Script" uid="uid://dpbm5n7hminal" path="res://longGoal.gd" id="1_y2c2j"]
+[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://Assets/redBlock.png" id="1_58cwo"]
+[ext_resource type="Script" uid="uid://dpbm5n7hminal" path="res://Scripts/longGoal.gd" id="1_y2c2j"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_y2c2j"]
 
