@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://di7dal4swsdty"]
+
+[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://redBlock.png" id="1_im0tn"]
+[ext_resource type="Script" uid="uid://b7op5c4nmkenn" path="res://block.gd" id="1_xfwl5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_im0tn"]
+radius = 2.0
+
+[node name="Block" type="Node2D" unique_id=1431870514]
+metadata/Color = 1
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1874012394]
+collision_layer = 8
+collision_mask = 237
+mass = 0.454
+gravity_scale = 0.0
+linear_damp = 1.0
+script = ExtResource("1_xfwl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1203235318]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_im0tn")
+
+[node name="TextureRect" type="TextureRect" parent="RigidBody2D" unique_id=270871329]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 7991.9995
+offset_bottom = 7991.9995
+scale = Vector2(0.002, 0.002)
+texture = ExtResource("1_im0tn")
+expand_mode = 1

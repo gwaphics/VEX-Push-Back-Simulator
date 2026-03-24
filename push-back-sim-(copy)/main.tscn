@@ -1,0 +1,528 @@
+[gd_scene format=3 uid="uid://cj74cot126rcp"]
+
+[ext_resource type="PackedScene" uid="uid://u60uplomfq4m" path="res://field.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://cowmxtpht1s4n" path="res://robot.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://di7dal4swsdty" path="res://block.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://uxac21idxs7c" path="res://longGoal.tscn" id="4_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://copf1vyvo58an" path="res://midGoal.tscn" id="5_lquwl"]
+[ext_resource type="Script" uid="uid://btjbtjaw68eo4" path="res://gui.gd" id="6_7mycd"]
+[ext_resource type="PackedScene" uid="uid://bv6ovw7adivq2" path="res://matchLoadTube.tscn" id="6_272bh"]
+
+[node name="Main" type="Node2D" unique_id=1624025435]
+texture_filter = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1196264078]
+
+[node name="Simulation" type="Control" parent="CanvasLayer" unique_id=340078249]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.88, 3.88)
+
+[node name="Field" parent="CanvasLayer/Simulation" unique_id=2139042720 instance=ExtResource("1_ig7tw")]
+
+[node name="MatchBlocks" type="Control" parent="CanvasLayer/Simulation" unique_id=465074746]
+anchors_preset = 0
+
+[node name="Block1" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1431870514 instance=ExtResource("3_h2yge")]
+position = Vector2(23.96907, 23.969078)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block2" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=2060097810 instance=ExtResource("3_h2yge")]
+position = Vector2(20.103104, 23.96907)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block3" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1018061409 instance=ExtResource("3_h2yge")]
+position = Vector2(23.96907, 20.103096)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block4" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1082027867 instance=ExtResource("3_h2yge")]
+position = Vector2(-20.103088, 23.96907)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block5" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=712985075 instance=ExtResource("3_h2yge")]
+position = Vector2(-23.96907, 23.96907)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block6" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=499545999 instance=ExtResource("3_h2yge")]
+position = Vector2(-23.969078, 20.103088)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block7" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1432699229 instance=ExtResource("3_h2yge")]
+position = Vector2(23.969078, -20.10309)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block8" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1304046523 instance=ExtResource("3_h2yge")]
+position = Vector2(20.103096, -23.96907)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block9" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=15266386 instance=ExtResource("3_h2yge")]
+position = Vector2(23.969078, -23.969072)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block10" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=545666969 instance=ExtResource("3_h2yge")]
+position = Vector2(-20.103096, -23.96907)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block11" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1482316847 instance=ExtResource("3_h2yge")]
+position = Vector2(-23.96907, -20.10309)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block12" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=412476400 instance=ExtResource("3_h2yge")]
+position = Vector2(-23.96907, -23.969072)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block13" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=815771293 instance=ExtResource("3_h2yge")]
+position = Vector2(-2.0618572, -58.24742)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block14" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=93459389 instance=ExtResource("3_h2yge")]
+position = Vector2(-5.9278316, -58.24742)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block15" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=96233135 instance=ExtResource("3_h2yge")]
+position = Vector2(5.670166, -58.24742)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block16" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=2112726476 instance=ExtResource("3_h2yge")]
+position = Vector2(1.8041992, -58.24742)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block17" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=118702913 instance=ExtResource("3_h2yge")]
+position = Vector2(5.9277954, 58.247437)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block18" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=517355115 instance=ExtResource("3_h2yge")]
+position = Vector2(2.0618286, 58.247406)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block21" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=212835156 instance=ExtResource("3_h2yge")]
+position = Vector2(-2.0618896, 58.247437)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block22" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1738884072 instance=ExtResource("3_h2yge")]
+position = Vector2(-5.9278564, 58.247406)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="NearRightMatchLoadTube" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=604393945 instance=ExtResource("6_272bh")]
+position = Vector2(47.68042, 69.58763)
+scale = Vector2(1.0000001, 1.0000001)
+metadata/RedBottom = true
+
+[node name="NearLeftMatchLoadTube" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=1025351012 instance=ExtResource("6_272bh")]
+position = Vector2(-47.680412, 69.32991)
+scale = Vector2(1.0000001, 1.0000001)
+metadata/RedBottom = true
+
+[node name="FarRightMatchLoadTube" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=975206612 instance=ExtResource("6_272bh")]
+position = Vector2(47.68045, -69.32991)
+rotation = -3.1415925
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="FarLeftMatchLoadTube" parent="CanvasLayer/Simulation/MatchBlocks" unique_id=592313934 instance=ExtResource("6_272bh")]
+position = Vector2(-47.680405, -69.3299)
+rotation = -3.1415925
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="SkillsBlocks" type="Control" parent="CanvasLayer/Simulation" unique_id=1920627046]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Block1" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1159618304 instance=ExtResource("3_h2yge")]
+position = Vector2(26.030926, 26.030926)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block2" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=181643326 instance=ExtResource("3_h2yge")]
+position = Vector2(22.164944, 26.030926)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block3" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=234808680 instance=ExtResource("3_h2yge")]
+position = Vector2(26.030926, 22.164951)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block4" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=385186262 instance=ExtResource("3_h2yge")]
+position = Vector2(22.164955, 22.164948)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block13" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=174094978 instance=ExtResource("3_h2yge")]
+position = Vector2(26.030914, -22.164978)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block14" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=2144783524 instance=ExtResource("3_h2yge")]
+position = Vector2(22.164948, -22.164978)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block15" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1895052134 instance=ExtResource("3_h2yge")]
+position = Vector2(26.030914, -26.030945)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block16" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1230423783 instance=ExtResource("3_h2yge")]
+position = Vector2(22.164948, -26.030945)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block5" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1703532186 instance=ExtResource("3_h2yge")]
+position = Vector2(-22.164948, 26.030914)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block6" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=422514470 instance=ExtResource("3_h2yge")]
+position = Vector2(-26.030914, 26.030914)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block7" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1313357336 instance=ExtResource("3_h2yge")]
+position = Vector2(-22.164948, 22.164948)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block8" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=316430011 instance=ExtResource("3_h2yge")]
+position = Vector2(-26.030914, 22.164948)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block9" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1781707143 instance=ExtResource("3_h2yge")]
+position = Vector2(-22.164948, -22.164932)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block10" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=836077618 instance=ExtResource("3_h2yge")]
+position = Vector2(-26.030914, -22.164932)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block11" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=2102234041 instance=ExtResource("3_h2yge")]
+position = Vector2(-22.164948, -26.03093)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block12" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1970933726 instance=ExtResource("3_h2yge")]
+position = Vector2(-26.030914, -26.03093)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block17" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1928038662 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.0517578e-05, -69.84535)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block18" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=665845582 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.8659787, -69.84534)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block19" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=924835453 instance=ExtResource("3_h2yge")]
+position = Vector2(3.8659806, -69.84534)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block20" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1202254201 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.0517578e-05, -65.979355)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block21" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=575756338 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.8659787, -65.97934)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block22" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=963440698 instance=ExtResource("3_h2yge")]
+position = Vector2(3.8659806, -65.97934)
+scale = Vector2(0.25, 0.25)
+
+[node name="Block23" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1780919130 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.0517578e-05, 65.979385)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block24" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1248906560 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.8659787, 65.9794)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block25" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1328033172 instance=ExtResource("3_h2yge")]
+position = Vector2(3.8659806, 65.9794)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block26" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1700305595 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.0517578e-05, 69.84538)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block27" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=660137373 instance=ExtResource("3_h2yge")]
+position = Vector2(-3.8659787, 69.8454)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="Block28" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=251333118 instance=ExtResource("3_h2yge")]
+position = Vector2(3.8659806, 69.8454)
+scale = Vector2(0.25, 0.25)
+metadata/Color = 2
+
+[node name="NearRightMatchLoadTube" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=1135357230 instance=ExtResource("6_272bh")]
+position = Vector2(47.68042, 69.84537)
+scale = Vector2(1.0000001, 1.0000001)
+metadata/RedBottom = true
+
+[node name="NearLeftMatchLoadTube" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=156041003 instance=ExtResource("6_272bh")]
+position = Vector2(-47.680412, 69.07219)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="FarRightMatchLoadTube" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=548808818 instance=ExtResource("6_272bh")]
+position = Vector2(47.68045, -69.072174)
+rotation = -3.1415925
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="FarLeftMatchLoadTube" parent="CanvasLayer/Simulation/SkillsBlocks" unique_id=465008098 instance=ExtResource("6_272bh")]
+position = Vector2(-47.680405, -69.07217)
+rotation = -3.1415925
+scale = Vector2(1.0000001, 1.0000001)
+metadata/RedBottom = true
+
+[node name="Robot" parent="CanvasLayer/Simulation" unique_id=1509750005 instance=ExtResource("2_0xm2m")]
+position = Vector2(19.587633, 54.38144)
+scale = Vector2(0.25, 0.25)
+
+[node name="RightLongGoal" parent="CanvasLayer/Simulation" unique_id=810399946 instance=ExtResource("4_1bvp3")]
+position = Vector2(45.61856, 0)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="LeftLongGoal" parent="CanvasLayer/Simulation" unique_id=302509779 instance=ExtResource("4_1bvp3")]
+position = Vector2(-50.5, 0)
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="LowGoal" parent="CanvasLayer/Simulation" unique_id=1861116677 instance=ExtResource("5_lquwl")]
+position = Vector2(-11.597931, -7.9896927)
+rotation = -0.7853983
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="MidGoal" parent="CanvasLayer/Simulation" unique_id=2092716988 instance=ExtResource("5_lquwl")]
+position = Vector2(7.9897003, -11.597939)
+rotation = 0.7853982
+scale = Vector2(1.0000001, 1.0000001)
+
+[node name="GUI" type="Control" parent="CanvasLayer" unique_id=69229260]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_7mycd")
+
+[node name="X" type="Label" parent="CanvasLayer/GUI" unique_id=503366065]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 85.0
+offset_right = 924.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 30
+text = "X: 0"
+
+[node name="Y" type="Label" parent="CanvasLayer/GUI" unique_id=1084360233]
+layout_mode = 0
+offset_left = 1010.0
+offset_top = 85.0
+offset_right = 1061.0
+offset_bottom = 127.0
+theme_override_font_sizes/font_size = 30
+text = "Y: 0"
+
+[node name="Theta" type="Label" parent="CanvasLayer/GUI" unique_id=1856790511]
+layout_mode = 0
+offset_left = 872.0
+offset_top = 127.0
+offset_right = 988.0
+offset_bottom = 169.0
+theme_override_font_sizes/font_size = 30
+text = "Theta: 0"
+
+[node name="Theta2" type="Label" parent="CanvasLayer/GUI" unique_id=1916504194]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 185.0
+offset_right = 242.0
+offset_bottom = 227.0
+theme_override_font_sizes/font_size = 30
+text = "Route Editor:"
+
+[node name="Coordinates" type="Label" parent="CanvasLayer/GUI" unique_id=234505365]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 168.0
+offset_right = 975.0
+offset_bottom = 210.0
+theme_override_font_sizes/font_size = 30
+text = "(0, 0, 0)"
+
+[node name="Air" type="Label" parent="CanvasLayer/GUI" unique_id=2086536748]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 212.0
+offset_right = 1030.0
+offset_bottom = 254.0
+theme_override_font_sizes/font_size = 30
+text = "Air: 100 psi"
+
+[node name="RedScore" type="Label" parent="CanvasLayer/GUI" unique_id=416366070]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 325.0
+offset_right = 975.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 30
+text = "Red: 0"
+
+[node name="BlueScore" type="Label" parent="CanvasLayer/GUI" unique_id=1033010947]
+layout_mode = 0
+offset_left = 1008.0
+offset_top = 324.0
+offset_right = 1110.0
+offset_bottom = 366.0
+theme_override_font_sizes/font_size = 30
+text = "Blue: 0"
+
+[node name="RightControl" type="Label" parent="CanvasLayer/GUI" unique_id=959667737]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 434.0
+offset_right = 1038.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 30
+text = "Right: none"
+
+[node name="ControlBonusLabel" type="Label" parent="CanvasLayer/GUI" unique_id=1500354459]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 388.0
+offset_right = 1117.0
+offset_bottom = 430.0
+theme_override_font_sizes/font_size = 30
+text = "Control Bonus:"
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/GUI" unique_id=969065121]
+layout_mode = 0
+offset_left = 901.0
+offset_top = 278.0
+offset_right = 1116.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 30
+text = "Score:"
+
+[node name="StatsLabel" type="Label" parent="CanvasLayer/GUI" unique_id=507771989]
+layout_mode = 0
+offset_left = 903.0
+offset_top = 38.0
+offset_right = 1118.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 30
+text = "Stats:"
+
+[node name="LeftControl" type="Label" parent="CanvasLayer/GUI" unique_id=1288556451]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 477.0
+offset_right = 1020.0
+offset_bottom = 519.0
+theme_override_font_sizes/font_size = 30
+text = "Left: none"
+
+[node name="MidControl" type="Label" parent="CanvasLayer/GUI" unique_id=975321729]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 521.0
+offset_right = 1018.0
+offset_bottom = 563.0
+theme_override_font_sizes/font_size = 30
+text = "Mid: none"
+
+[node name="LowControl" type="Label" parent="CanvasLayer/GUI" unique_id=181095578]
+layout_mode = 0
+offset_left = 873.0
+offset_top = 563.0
+offset_right = 1022.0
+offset_bottom = 605.0
+theme_override_font_sizes/font_size = 30
+text = "Low: none"
+
+[node name="MatchButton" type="Button" parent="CanvasLayer/GUI" unique_id=1049885572]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 42.0
+offset_right = 222.0
+offset_bottom = 100.0
+theme_override_font_sizes/font_size = 30
+text = "Match"
+
+[node name="SkillsButton" type="Button" parent="CanvasLayer/GUI" unique_id=820043650]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 107.0
+offset_right = 222.0
+offset_bottom = 165.0
+theme_override_font_sizes/font_size = 30
+text = "Skills"
+
+[node name="TextEdit" type="TextEdit" parent="CanvasLayer/GUI" unique_id=1250778474]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 235.0
+offset_right = 266.0
+offset_bottom = 545.0
+text = "// intake first 3 balls
+intakeOn=true
+(96,50,f,1500)
+
+// descore matchload tube
+(119,25,f,1500)
+tongueDown=true
+(119,12,f,900)
+wait(100)
+
+// score on long goal
+score=true
+(119,45,b,2000)
+
+// wing push
+(119,35,f,1000)
+(106,35,f,750)
+(108,60,b,1500)"
+placeholder_text = "Input points as:
+(x,y,forward/backward,timeout)
+intakeOn=true
+
+// comment
+(x,y,forward/backward,timeout)"
+
+[node name="RunCodeButton" type="Button" parent="CanvasLayer/GUI" unique_id=514857929]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 557.0
+offset_right = 135.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 30
+text = "Start"
+
+[node name="ResetButton" type="Button" parent="CanvasLayer/GUI" unique_id=73937040]
+layout_mode = 0
+offset_left = 147.0
+offset_top = 557.0
+offset_right = 266.0
+offset_bottom = 615.0
+theme_override_font_sizes/font_size = 30
+text = "Reset"
+
+[connection signal="pressed" from="CanvasLayer/GUI/MatchButton" to="CanvasLayer/GUI" method="_on_match_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/SkillsButton" to="CanvasLayer/GUI" method="_on_skills_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/RunCodeButton" to="CanvasLayer/GUI" method="_on_run_code_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/GUI/ResetButton" to="CanvasLayer/GUI" method="_on_reset_button_pressed"]

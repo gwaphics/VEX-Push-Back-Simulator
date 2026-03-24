@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://bv6ovw7adivq2"]
+
+[ext_resource type="Script" uid="uid://bcwv8y2dhyotg" path="res://matchLoadTube.gd" id="1_ds8se"]
+[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://redBlock.png" id="2_ds8se"]
+[ext_resource type="Texture2D" uid="uid://bsjqwvakxk5mw" path="res://blueBlock.png" id="3_gmn1k"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_4njvk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ds8se"]
+radius = 2.5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gmn1k"]
+radius = 3.0
+
+[node name="MatchLoadTube" type="Node2D" unique_id=604393945]
+metadata/RedBottom = false
+
+[node name="MatchLoadTubeStaticBody" type="StaticBody2D" parent="." unique_id=228677568]
+position = Vector2(2.5, 0)
+collision_layer = 64
+collision_mask = 11
+script = ExtResource("1_ds8se")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="MatchLoadTubeStaticBody" unique_id=154096911]
+modulate = Color(0.9823119, 0.36286357, 5.7756904e-07, 1)
+position = Vector2(-2.4999998, -1.4210855e-14)
+scale = Vector2(5, 5)
+mesh = SubResource("SphereMesh_4njvk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchLoadTubeStaticBody" unique_id=259360342]
+position = Vector2(-2.5, 0)
+shape = SubResource("CircleShape2D_ds8se")
+
+[node name="MatchLoadTubeZone" type="Area2D" parent="MatchLoadTubeStaticBody" unique_id=870260814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MatchLoadTubeStaticBody/MatchLoadTubeZone" unique_id=2059442432]
+position = Vector2(-2.5, 0)
+shape = SubResource("CircleShape2D_gmn1k")
+
+[node name="Timer" type="Timer" parent="MatchLoadTubeStaticBody" unique_id=183638524]
+
+[node name="Blocks" type="Control" parent="." unique_id=12814342]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 0
+offset_left = -2.0528603
+offset_top = -11.0
+offset_right = 3.1339035
+offset_bottom = 17.9903
+rotation = 1.5707964
+pivot_offset = Vector2(2.144, 16.382)
+
+[node name="Block1" type="TextureRect" parent="Blocks" unique_id=1193854371]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 24.0
+offset_right = 5.0
+offset_bottom = 28.0
+texture = ExtResource("2_ds8se")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block2" type="TextureRect" parent="Blocks" unique_id=157095445]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 20.0
+offset_right = 5.0
+offset_bottom = 24.0
+texture = ExtResource("2_ds8se")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block3" type="TextureRect" parent="Blocks" unique_id=459689965]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 20.0
+texture = ExtResource("2_ds8se")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block4" type="TextureRect" parent="Blocks" unique_id=423986619]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 12.0
+offset_right = 5.0
+offset_bottom = 16.0
+texture = ExtResource("3_gmn1k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block5" type="TextureRect" parent="Blocks" unique_id=252817059]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 5.0
+offset_bottom = 12.0
+texture = ExtResource("3_gmn1k")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block6" type="TextureRect" parent="Blocks" unique_id=614159170]
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 5.0
+offset_bottom = 8.0
+texture = ExtResource("3_gmn1k")
+expand_mode = 1
+stretch_mode = 5

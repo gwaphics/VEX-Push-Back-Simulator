@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://uxac21idxs7c"]
+
+[ext_resource type="Texture2D" uid="uid://b1ot2shajfomr" path="res://redBlock.png" id="1_58cwo"]
+[ext_resource type="Script" uid="uid://dpbm5n7hminal" path="res://longGoal.gd" id="1_y2c2j"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_y2c2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wxktm"]
+size = Vector2(10, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58cwo"]
+size = Vector2(5, 5)
+
+[node name="LongGoal" type="Node2D" unique_id=810399946]
+metadata/RedScored = 0
+metadata/BlueScored = 0
+metadata/Control = "none"
+
+[node name="LongGoalPosts" type="StaticBody2D" parent="." unique_id=1000575373]
+collision_layer = 32
+collision_mask = 15
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LongGoalPosts" unique_id=1173026098]
+position = Vector2(3, 8)
+scale = Vector2(1, 1.4375002)
+polygon = PackedVector2Array(-3, -18.782606, 2, -18.782606, 2, -20.488258, 2, -22.260866, 0, -22.260866, 0, -22.260866, -1, -22.260866, -3, -22.260866)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LongGoalPosts" unique_id=736641657]
+position = Vector2(2, 0)
+rotation = -3.1415925
+polygon = PackedVector2Array(-3, -19, 2, -19, 2, -20.488258, 1.9999979, -24, 0.99999785, -24, -1.0000021, -24, -3.000002, -24)
+
+[node name="LongGoalStaticBody" type="StaticBody2D" parent="." unique_id=1601428975]
+position = Vector2(2.5, 0)
+collision_layer = 16
+script = ExtResource("1_y2c2j")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="LongGoalStaticBody" unique_id=235986134]
+modulate = Color(0.67687863, 0.67687863, 0.67687863, 1)
+position = Vector2(0, -2.3841858e-07)
+scale = Vector2(5, 52.000004)
+mesh = SubResource("QuadMesh_y2c2j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LongGoalStaticBody" unique_id=327997576]
+scale = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_wxktm")
+
+[node name="Timer" type="Timer" parent="LongGoalStaticBody" unique_id=279231342]
+
+[node name="Blocks" type="Control" parent="." unique_id=103347491]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 6.0
+offset_bottom = 30.0
+
+[node name="Block1" type="TextureRect" parent="Blocks" unique_id=2001975615]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 24.0
+offset_right = 5.0
+offset_bottom = 28.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block2" type="TextureRect" parent="Blocks" unique_id=1977860202]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 20.0
+offset_right = 5.0
+offset_bottom = 24.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block3" type="TextureRect" parent="Blocks" unique_id=2007956537]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 16.0
+offset_right = 5.0
+offset_bottom = 20.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block4" type="TextureRect" parent="Blocks" unique_id=1189200614]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 12.0
+offset_right = 5.0
+offset_bottom = 16.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block5" type="TextureRect" parent="Blocks" unique_id=1675679000]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 8.0
+offset_right = 5.0
+offset_bottom = 12.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block6" type="TextureRect" parent="Blocks" unique_id=344203793]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = 4.0
+offset_right = 5.0
+offset_bottom = 8.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block7" type="TextureRect" parent="Blocks" unique_id=1041534342]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_right = 5.0
+offset_bottom = 4.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block8" type="TextureRect" parent="Blocks" unique_id=1907253497]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -4.0
+offset_right = 5.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block9" type="TextureRect" parent="Blocks" unique_id=107817577]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -8.0
+offset_right = 5.0
+offset_bottom = -4.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block10" type="TextureRect" parent="Blocks" unique_id=1897757119]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -12.0
+offset_right = 5.0
+offset_bottom = -8.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block11" type="TextureRect" parent="Blocks" unique_id=2034790190]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -16.0
+offset_right = 5.0
+offset_bottom = -12.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block12" type="TextureRect" parent="Blocks" unique_id=1932966449]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -20.0
+offset_right = 5.0
+offset_bottom = -16.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block13" type="TextureRect" parent="Blocks" unique_id=1524931451]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -24.0
+offset_right = 5.0
+offset_bottom = -20.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Block14" type="TextureRect" parent="Blocks" unique_id=560335119]
+visible = false
+custom_minimum_size = Vector2(4, 4)
+layout_mode = 0
+offset_top = -28.0
+offset_right = 5.0
+offset_bottom = -24.0
+texture = ExtResource("1_58cwo")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BottomScoreZone" type="Area2D" parent="." unique_id=1502160834]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BottomScoreZone" unique_id=1802431255]
+position = Vector2(2.5, 26.5)
+shape = SubResource("RectangleShape2D_58cwo")
+
+[node name="TopScoreZone" type="Area2D" parent="." unique_id=2146871167]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TopScoreZone" unique_id=1000066959]
+position = Vector2(2.5, -26.5)
+shape = SubResource("RectangleShape2D_58cwo")

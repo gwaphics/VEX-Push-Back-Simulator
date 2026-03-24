@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://cowmxtpht1s4n"]
+
+[ext_resource type="Script" uid="uid://du0soikp4brou" path="res://robotBase.gd" id="2_dfm56"]
+[ext_resource type="Texture2D" uid="uid://j7lba557aux7" path="res://robot.png" id="2_yhfw1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv0v2"]
+size = Vector2(9.9, 57.52381)
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_dfm56"]
+points = PackedVector2Array(-26, 5, 4, 5, 4, -10, -26, -10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yhfw1"]
+size = Vector2(30, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3cn6f"]
+size = Vector2(30.5, 11.375)
+
+[sub_resource type="QuadMesh" id="QuadMesh_dfm56"]
+
+[node name="Robot" type="Node2D" unique_id=1509750005]
+
+[node name="RobotBase" type="RigidBody2D" parent="." unique_id=1992014662]
+collision_mask = 184
+mass = 6.8
+gravity_scale = 0.0
+linear_damp = 5.0
+angular_damp = 5.0
+script = ExtResource("2_dfm56")
+
+[node name="Sprite2D" type="Sprite2D" parent="RobotBase" unique_id=1123149569]
+scale = Vector2(0.04, 0.04)
+texture = ExtResource("2_yhfw1")
+
+[node name="LeftDT" type="CollisionShape2D" parent="RobotBase" unique_id=1384641642]
+position = Vector2(-20, 3)
+scale = Vector2(1, 1.05)
+shape = SubResource("RectangleShape2D_gv0v2")
+
+[node name="RightDT" type="CollisionShape2D" parent="RobotBase" unique_id=943752885]
+position = Vector2(20.05, 2.9)
+scale = Vector2(1, 1.05)
+shape = SubResource("RectangleShape2D_gv0v2")
+
+[node name="LongGoalAlligner" type="CollisionShape2D" parent="RobotBase" unique_id=1441586187]
+position = Vector2(11, 12)
+shape = SubResource("ConvexPolygonShape2D_dfm56")
+
+[node name="IntakeCapacity" type="Label" parent="RobotBase" unique_id=1975273479]
+offset_left = -20.0
+offset_top = -22.0
+offset_right = 20.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 26
+text = "0/8"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TongueCol" type="CollisionShape2D" parent="RobotBase" unique_id=1398599666]
+position = Vector2(0, -44)
+shape = SubResource("RectangleShape2D_yhfw1")
+
+[node name="Front" type="CollisionShape2D" parent="RobotBase" unique_id=1136353656]
+position = Vector2(0, -23)
+shape = SubResource("RectangleShape2D_3cn6f")
+
+[node name="IntakeZone" type="Area2D" parent="RobotBase" unique_id=2040770928]
+collision_layer = 0
+collision_mask = 8
+
+[node name="Intake" type="CollisionShape2D" parent="RobotBase/IntakeZone" unique_id=319735802]
+position = Vector2(0, -28)
+shape = SubResource("RectangleShape2D_3cn6f")
+
+[node name="Tongue" type="Area2D" parent="RobotBase" unique_id=577280174]
+
+[node name="TongueMesh" type="MeshInstance2D" parent="RobotBase/Tongue" unique_id=1959775]
+position = Vector2(7.748604e-07, -44)
+scale = Vector2(30.000002, 10.000004)
+mesh = SubResource("QuadMesh_dfm56")
+
+[node name="LeftTongueArm" type="MeshInstance2D" parent="RobotBase/Tongue" unique_id=681876523]
+position = Vector2(-16.5, -38.000004)
+scale = Vector2(3, 22.000006)
+mesh = SubResource("QuadMesh_dfm56")
+
+[node name="RightTongueArm" type="MeshInstance2D" parent="RobotBase/Tongue" unique_id=1839343807]
+position = Vector2(16.5, -38)
+scale = Vector2(3, 22.000006)
+mesh = SubResource("QuadMesh_dfm56")
+
+[node name="Tongue" type="CollisionShape2D" parent="RobotBase/Tongue" unique_id=1193925995]
+position = Vector2(0, -44)
+shape = SubResource("RectangleShape2D_yhfw1")
+
+[node name="Timer" type="Timer" parent="RobotBase" unique_id=1162997495]

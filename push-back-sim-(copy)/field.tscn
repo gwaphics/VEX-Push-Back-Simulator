@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://u60uplomfq4m"]
+
+[ext_resource type="Texture2D" uid="uid://cab4kdhndfgpy" path="res://pushBackSkillsFieldCropped.png" id="1_0cutk"]
+[ext_resource type="Texture2D" uid="uid://sldns2go6ofb" path="res://redParkZone.png" id="2_6e7u2"]
+[ext_resource type="Texture2D" uid="uid://xigtlqfdted1" path="res://blueParkZone.png" id="2_ujqnb"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_0cutk"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_jput1"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_6e7u2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6e7u2"]
+size = Vector2(164.5, 12.049998)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ujqnb"]
+size = Vector2(10, 12)
+
+[node name="Field" type="Node2D" unique_id=2139042720]
+
+[node name="background" type="MeshInstance2D" parent="." unique_id=13268087]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(-7.6293945e-06, -6.67572e-06)
+scale = Vector2(296, 165.99998)
+mesh = SubResource("QuadMesh_0cutk")
+
+[node name="field" type="MeshInstance2D" parent="." unique_id=134099195]
+modulate = Color(0.42745098, 0.42745098, 0.42745098, 1)
+scale = Vector2(144, 144)
+mesh = SubResource("QuadMesh_jput1")
+
+[node name="fieldLine1" type="MeshInstance2D" parent="." unique_id=76270016]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine2" type="MeshInstance2D" parent="." unique_id=489628713]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(24, 0)
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine3" type="MeshInstance2D" parent="." unique_id=1132392553]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(48, 0)
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine4" type="MeshInstance2D" parent="." unique_id=1098419349]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(-24, 0)
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine5" type="MeshInstance2D" parent="." unique_id=610464843]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(-48, 0)
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine6" type="MeshInstance2D" parent="." unique_id=1370308011]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(0, 24)
+rotation = 1.5707964
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine7" type="MeshInstance2D" parent="." unique_id=1076411824]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(0, 48)
+rotation = 1.5707964
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine8" type="MeshInstance2D" parent="." unique_id=164647363]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(0, -24)
+rotation = 1.5707964
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine9" type="MeshInstance2D" parent="." unique_id=35096738]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+position = Vector2(0, -48)
+rotation = 1.5707964
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="fieldLine10" type="MeshInstance2D" parent="." unique_id=1596206838]
+modulate = Color(0.30323294, 0.3032328, 0.30323282, 1)
+rotation = 1.5707964
+scale = Vector2(0.5, 144)
+mesh = SubResource("QuadMesh_6e7u2")
+
+[node name="PushBackSkillsFieldCropped" type="Sprite2D" parent="." unique_id=686565201]
+visible = false
+self_modulate = Color(1, 1, 1, 0.32156864)
+position = Vector2(-8, 0)
+rotation = 4.712389
+scale = Vector2(0.2769975, 0.2769975)
+texture = ExtResource("1_0cutk")
+
+[node name="BluePark" type="Sprite2D" parent="." unique_id=564832654]
+position = Vector2(2.5, -61.3)
+rotation = -1.5707964
+scale = Vector2(0.063, 0.063)
+texture = ExtResource("2_ujqnb")
+
+[node name="RedPark" type="Sprite2D" parent="." unique_id=1859425456]
+position = Vector2(4, 63.5)
+rotation = 4.712389
+scale = Vector2(0.06344328, 0.06344328)
+texture = ExtResource("2_6e7u2")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=119816542]
+collision_layer = 128
+collision_mask = 15
+
+[node name="topWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1501954469]
+position = Vector2(0, -78)
+shape = SubResource("RectangleShape2D_6e7u2")
+
+[node name="bottomWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1725110493]
+position = Vector2(-1, 78)
+shape = SubResource("RectangleShape2D_6e7u2")
+
+[node name="leftWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=1442585995]
+position = Vector2(-77.975, -0.25)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_6e7u2")
+
+[node name="rightWall" type="CollisionShape2D" parent="StaticBody2D" unique_id=37956399]
+position = Vector2(78, -1)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_6e7u2")
+
+[node name="RedParkZone" type="Area2D" parent="." unique_id=1712190464]
+collision_layer = 128
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedParkZone" unique_id=2017265444]
+position = Vector2(0, 66)
+shape = SubResource("RectangleShape2D_ujqnb")
+
+[node name="BlueParkZone" type="Area2D" parent="." unique_id=622468031]
+collision_layer = 128
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BlueParkZone" unique_id=385704375]
+position = Vector2(0, -66)
+shape = SubResource("RectangleShape2D_ujqnb")
